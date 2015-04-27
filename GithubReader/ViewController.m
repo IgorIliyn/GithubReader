@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Hello", nil);
     // Do any additional setup after loading the view, typically from a nib.
 }
 
