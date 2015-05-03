@@ -5,4 +5,6 @@
   Created by Igor Iliyn on 4/27/15.
   Copyright (c) 2015 aura. All rights reserved.
 */
-"Hello" = "Hello";
+"Input username to know more:" = "Input username to know more:";
+"some Github username" = "some Github username";
+"Tell me more!" = "Tell me more!";

@@ -5,4 +5,6 @@
   Created by Igor Iliyn on 4/27/15.
   Copyright (c) 2015 aura. All rights reserved.
 */
-"Hello" = "Привіт";
+"Input username to know more:" = "Введіть ім'я користувача, щоб дізнатися більше:";
+"some Github username" = "якийсь Github користувач";
+"Tell me more!" = "Розкажіть мені більше!";

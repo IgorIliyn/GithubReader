@@ -15,9 +15,15 @@
 		217E977F1AE777B700DFB130 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217E977E1AE777B700DFB130 /* Images.xcassets */; };
 		217E97821AE777B700DFB130 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217E97801AE777B700DFB130 /* LaunchScreen.xib */; };
 		217E978E1AE777B800DFB130 /* GithubReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E978D1AE777B800DFB130 /* GithubReaderTests.m */; };
-		217E979A1AE780AE00DFB130 /* gitImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 217E97991AE780AE00DFB130 /* gitImage.png */; };
-		217E979C1AE7817100DFB130 /* gitBrunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 217E979B1AE7817100DFB130 /* gitBrunch.png */; };
 		219DA03E1AEE58E50076742F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 219DA0401AEE58E50076742F /* Localizable.strings */; };
+		A5D0831E1AF686620022DC41 /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0831D1AF686620022DC41 /* DataLoader.m */; };
+		A5D083221AF698F10022DC41 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D083211AF698F10022DC41 /* Parser.m */; };
+		A5D93ACD1AF6213800B3E056 /* brunch.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D93AC71AF6213800B3E056 /* brunch.png */; };
+		A5D93ACE1AF6213800B3E056 /* earth.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D93AC81AF6213800B3E056 /* earth.png */; };
+		A5D93ACF1AF6213800B3E056 /* fork.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D93AC91AF6213800B3E056 /* fork.png */; };
+		A5D93AD01AF6213800B3E056 /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D93ACA1AF6213800B3E056 /* github.png */; };
+		A5D93AD11AF6213800B3E056 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D93ACB1AF6213800B3E056 /* save.png */; };
+		A5D93AD21AF6213800B3E056 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D93ACC1AF6213800B3E056 /* star.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +51,20 @@
 		217E97871AE777B700DFB130 /* GithubReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		217E978C1AE777B700DFB130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		217E978D1AE777B800DFB130 /* GithubReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubReaderTests.m; sourceTree = "<group>"; };
-		217E97991AE780AE00DFB130 /* gitImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gitImage.png; sourceTree = "<group>"; };
-		217E979B1AE7817100DFB130 /* gitBrunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gitBrunch.png; sourceTree = "<group>"; };
 		219DA03C1AEE58DA0076742F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		219DA03D1AEE58DA0076742F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		219DA03F1AEE58E50076742F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		219DA0411AEE58E80076742F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A5D0831C1AF686620022DC41 /* DataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoader.h; sourceTree = "<group>"; };
+		A5D0831D1AF686620022DC41 /* DataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLoader.m; sourceTree = "<group>"; };
+		A5D083201AF698F10022DC41 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		A5D083211AF698F10022DC41 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		A5D93AC71AF6213800B3E056 /* brunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brunch.png; sourceTree = "<group>"; };
+		A5D93AC81AF6213800B3E056 /* earth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth.png; sourceTree = "<group>"; };
+		A5D93AC91AF6213800B3E056 /* fork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fork.png; sourceTree = "<group>"; };
+		A5D93ACA1AF6213800B3E056 /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
+		A5D93ACB1AF6213800B3E056 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		A5D93ACC1AF6213800B3E056 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +106,7 @@
 		217E976D1AE777B600DFB130 /* GithubReader */ = {
 			isa = PBXGroup;
 			children = (
+				A5D93AD31AF6833400B3E056 /* Network */,
 				217E97971AE7805D00DFB130 /* Controllers */,
 				217E97721AE777B700DFB130 /* AppDelegate.h */,
 				217E97731AE777B700DFB130 /* AppDelegate.m */,
@@ -144,10 +159,33 @@
 		217E97981AE7809000DFB130 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				217E97991AE780AE00DFB130 /* gitImage.png */,
-				217E979B1AE7817100DFB130 /* gitBrunch.png */,
+				A5D93AC71AF6213800B3E056 /* brunch.png */,
+				A5D93AC81AF6213800B3E056 /* earth.png */,
+				A5D93AC91AF6213800B3E056 /* fork.png */,
+				A5D93ACA1AF6213800B3E056 /* github.png */,
+				A5D93ACB1AF6213800B3E056 /* save.png */,
+				A5D93ACC1AF6213800B3E056 /* star.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		A5D0831F1AF698240022DC41 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				A5D083201AF698F10022DC41 /* Parser.h */,
+				A5D083211AF698F10022DC41 /* Parser.m */,
+			);
+			name = Parsing;
+			sourceTree = "<group>";
+		};
+		A5D93AD31AF6833400B3E056 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A5D0831F1AF698240022DC41 /* Parsing */,
+				A5D0831C1AF686620022DC41 /* DataLoader.h */,
+				A5D0831D1AF686620022DC41 /* DataLoader.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +269,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D93AD01AF6213800B3E056 /* github.png in Resources */,
+				A5D93AD21AF6213800B3E056 /* star.png in Resources */,
+				A5D93ACD1AF6213800B3E056 /* brunch.png in Resources */,
+				A5D93AD11AF6213800B3E056 /* save.png in Resources */,
+				A5D93ACF1AF6213800B3E056 /* fork.png in Resources */,
 				217E977D1AE777B700DFB130 /* Main.storyboard in Resources */,
+				A5D93ACE1AF6213800B3E056 /* earth.png in Resources */,
 				219DA03E1AEE58E50076742F /* Localizable.strings in Resources */,
 				217E97821AE777B700DFB130 /* LaunchScreen.xib in Resources */,
-				217E979A1AE780AE00DFB130 /* gitImage.png in Resources */,
-				217E979C1AE7817100DFB130 /* gitBrunch.png in Resources */,
 				217E977F1AE777B700DFB130 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +300,8 @@
 				217E97771AE777B700DFB130 /* GithubReader.xcdatamodeld in Sources */,
 				217E977A1AE777B700DFB130 /* ViewController.m in Sources */,
 				217E97711AE777B700DFB130 /* main.m in Sources */,
+				A5D083221AF698F10022DC41 /* Parser.m in Sources */,
+				A5D0831E1AF686620022DC41 /* DataLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -383,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
