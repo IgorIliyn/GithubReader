@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214990011AF7589600253009 /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214990001AF7589600253009 /* MoreInfoViewController.m */; };
+		214990051AF77FE400253009 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214990041AF77FE400253009 /* WebViewController.m */; };
 		217E97711AE777B700DFB130 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E97701AE777B700DFB130 /* main.m */; };
 		217E97741AE777B700DFB130 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E97731AE777B700DFB130 /* AppDelegate.m */; };
 		217E97771AE777B700DFB130 /* GithubReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 217E97751AE777B700DFB130 /* GithubReader.xcdatamodeld */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21498FFF1AF7589600253009 /* MoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
+		214990001AF7589600253009 /* MoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
+		214990031AF77FE400253009 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		214990041AF77FE400253009 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		217E976B1AE777B600DFB130 /* GithubReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217E976F1AE777B700DFB130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		217E97701AE777B700DFB130 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +91,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214990021AF76A5300253009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		217E97621AE777B500DFB130 = {
 			isa = PBXGroup;
 			children = (
@@ -106,15 +119,16 @@
 		217E976D1AE777B600DFB130 /* GithubReader */ = {
 			isa = PBXGroup;
 			children = (
-				A5D93AD31AF6833400B3E056 /* Network */,
-				217E97971AE7805D00DFB130 /* Controllers */,
 				217E97721AE777B700DFB130 /* AppDelegate.h */,
 				217E97731AE777B700DFB130 /* AppDelegate.m */,
-				217E977B1AE777B700DFB130 /* Main.storyboard */,
+				217E97971AE7805D00DFB130 /* Controllers */,
+				217E97751AE777B700DFB130 /* GithubReader.xcdatamodeld */,
 				217E977E1AE777B700DFB130 /* Images.xcassets */,
 				217E97801AE777B700DFB130 /* LaunchScreen.xib */,
-				217E97751AE777B700DFB130 /* GithubReader.xcdatamodeld */,
+				217E977B1AE777B700DFB130 /* Main.storyboard */,
+				A5D93AD31AF6833400B3E056 /* Network */,
 				217E976E1AE777B600DFB130 /* Supporting Files */,
+				214990021AF76A5300253009 /* Views */,
 			);
 			path = GithubReader;
 			sourceTree = "<group>";
@@ -150,8 +164,12 @@
 		217E97971AE7805D00DFB130 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				21498FFF1AF7589600253009 /* MoreInfoViewController.h */,
+				214990001AF7589600253009 /* MoreInfoViewController.m */,
 				217E97781AE777B700DFB130 /* ViewController.h */,
 				217E97791AE777B700DFB130 /* ViewController.m */,
+				214990031AF77FE400253009 /* WebViewController.h */,
+				214990041AF77FE400253009 /* WebViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -181,9 +199,9 @@
 		A5D93AD31AF6833400B3E056 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				A5D0831F1AF698240022DC41 /* Parsing */,
 				A5D0831C1AF686620022DC41 /* DataLoader.h */,
 				A5D0831D1AF686620022DC41 /* DataLoader.m */,
+				A5D0831F1AF698240022DC41 /* Parsing */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -296,8 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214990011AF7589600253009 /* MoreInfoViewController.m in Sources */,
 				217E97741AE777B700DFB130 /* AppDelegate.m in Sources */,
 				217E97771AE777B700DFB130 /* GithubReader.xcdatamodeld in Sources */,
+				214990051AF77FE400253009 /* WebViewController.m in Sources */,
 				217E977A1AE777B700DFB130 /* ViewController.m in Sources */,
 				217E97711AE777B700DFB130 /* main.m in Sources */,
 				A5D083221AF698F10022DC41 /* Parser.m in Sources */,

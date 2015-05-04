@@ -17,11 +17,17 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self initAppearance];
     self.userNames = [NSMutableArray array];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.userNames removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,8 +60,9 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     DataLoader *loader = [[DataLoader alloc]init];
-    loader.complationHandler = ^(NSMutableArray *userNamesArray){
-        self.userNames = userNamesArray;
+    Parser *parser = [[Parser alloc]init];
+    loader.complationHandler = ^(NSMutableData *data){
+        self.userNames = [parser parseUserNames:data];
         [self.tableView reloadData];
     };
     [loader userSearch:searchBar.text];
@@ -107,8 +114,6 @@
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = leftBarButtonItem;
     
-    self.viewOffset = self.searchBar.frame.origin.y - 44;
-    
     
 }
 
@@ -116,6 +121,7 @@
 
 - (void)searchAnimation
 {
+    self.viewOffset = self.searchBar.frame.origin.y - 64;
     CGRect frame = self.view.frame;;
     CGFloat alpha;
     
@@ -144,7 +150,9 @@
 
 - (IBAction)tellMeMoreAction:(UIButton *)sender
 {
-    
+    if (![self.searchBar.text isEqualToString:@""]) {
+        [self performSegueWithIdentifier:@"goToMoreInfo" sender:self];
+    }
 }
 
 - (void)homeAction
@@ -168,6 +176,24 @@
     }
     cell.textLabel.text = [self.userNames objectAtIndex:indexPath.row];
     return cell;
+}
+
+#pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.searchBar.text = [self.userNames objectAtIndex:indexPath.row];
+    [self searchAnimation];
+    [self.view endEditing:YES];
+}
+
+#pragma mark Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"goToMoreInfo"]) {
+        [[segue destinationViewController] setUserName:self.searchBar.text];
+    }
 }
 
 

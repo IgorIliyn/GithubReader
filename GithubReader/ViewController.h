@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "DataLoader.h"
+#import "Parser.h"
+#import "MoreInfoViewController.h"
 
 @interface ViewController : UIViewController
 

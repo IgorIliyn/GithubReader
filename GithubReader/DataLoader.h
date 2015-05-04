@@ -7,16 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Parser.h"
 
 @interface DataLoader : NSObject
 
 @property (nonatomic, strong) NSURLSession *session;
-@property (nonatomic, copy) void (^complationHandler)(NSMutableArray *);
+@property (nonatomic, copy) void (^complationHandler)(NSMutableData *);
 
 - (void)userSearch:(NSString *)name;
 - (void)userInfo:(NSString *)name;
 
-- (id)init;
 
 @end
