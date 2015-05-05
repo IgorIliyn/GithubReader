@@ -9,7 +9,8 @@
 #import "DataLoader.h"
 
 #define SEARCH_USERS_URL @"https://api.github.com/search/users?q="
-#define USER_INFO_URL @"https://api.github.com/users/"
+#define USER_INFO_URL    @"https://api.github.com/users/"
+#define USER_REPOS_URL   @"https://api.github.com/users/"
 
 @interface DataLoader()
 
@@ -30,6 +31,12 @@
 - (void)userInfo:(NSString *)name
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",USER_INFO_URL,name]]];
+    self.connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+}
+
+- (void)userRepositories:(NSString *)name
+{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@/repos",USER_REPOS_URL,name]]];
     self.connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
 }
 

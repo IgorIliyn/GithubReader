@@ -15,6 +15,6 @@
 
 - (void)userSearch:(NSString *)name;
 - (void)userInfo:(NSString *)name;
-
+- (void)userRepositories:(NSString *)name;
 
 @end

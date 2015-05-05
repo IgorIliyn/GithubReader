@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parser.h"
+#import "DataLoader.h"
+#import "ImageDownloader.h"
+#import "RepoTableViewCell.h"
+#import <CoreData/CoreData.h>
 
 @interface MoreInfoViewController : UIViewController
 
@@ -16,8 +21,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *followingLabel;
 @property (strong, nonatomic) IBOutlet UILabel *repoLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *avatarImage;
-@property (strong, nonatomic) IBOutlet UIButton *earthButton;
-@property (strong, nonatomic) IBOutlet UIButton *saveButton;
-@property (strong, nonatomic) IBOutlet UIButton *brunchButton;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loader;
+
 
 @end

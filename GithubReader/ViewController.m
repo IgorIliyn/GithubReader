@@ -28,6 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.userNames removeAllObjects];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

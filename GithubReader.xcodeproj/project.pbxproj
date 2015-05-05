@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		214990011AF7589600253009 /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214990001AF7589600253009 /* MoreInfoViewController.m */; };
-		214990051AF77FE400253009 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214990041AF77FE400253009 /* WebViewController.m */; };
+		214990091AF79B5A00253009 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 214990081AF79B5A00253009 /* UserInfo.m */; };
+		2149900C1AF79B7600253009 /* RepositoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2149900B1AF79B7600253009 /* RepositoryInfo.m */; };
+		2149900F1AF79DC500253009 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2149900E1AF79DC500253009 /* ImageDownloader.m */; };
+		214990131AF7ABC900253009 /* RepoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214990111AF7ABC900253009 /* RepoTableViewCell.m */; };
+		214990141AF7ABC900253009 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214990121AF7ABC900253009 /* RepoTableViewCell.xib */; };
 		217E97711AE777B700DFB130 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E97701AE777B700DFB130 /* main.m */; };
 		217E97741AE777B700DFB130 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E97731AE777B700DFB130 /* AppDelegate.m */; };
 		217E97771AE777B700DFB130 /* GithubReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 217E97751AE777B700DFB130 /* GithubReader.xcdatamodeld */; };
@@ -41,8 +45,15 @@
 /* Begin PBXFileReference section */
 		21498FFF1AF7589600253009 /* MoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
 		214990001AF7589600253009 /* MoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
-		214990031AF77FE400253009 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		214990041AF77FE400253009 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		214990071AF79B5A00253009 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		214990081AF79B5A00253009 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		2149900A1AF79B7600253009 /* RepositoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryInfo.h; sourceTree = "<group>"; };
+		2149900B1AF79B7600253009 /* RepositoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryInfo.m; sourceTree = "<group>"; };
+		2149900D1AF79DC500253009 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		2149900E1AF79DC500253009 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		214990101AF7ABC900253009 /* RepoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoTableViewCell.h; sourceTree = "<group>"; };
+		214990111AF7ABC900253009 /* RepoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoTableViewCell.m; sourceTree = "<group>"; };
+		214990121AF7ABC900253009 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 		217E976B1AE777B600DFB130 /* GithubReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217E976F1AE777B700DFB130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		217E97701AE777B700DFB130 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,8 +105,22 @@
 		214990021AF76A5300253009 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				214990101AF7ABC900253009 /* RepoTableViewCell.h */,
+				214990111AF7ABC900253009 /* RepoTableViewCell.m */,
+				214990121AF7ABC900253009 /* RepoTableViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		214990061AF79B4100253009 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				214990071AF79B5A00253009 /* UserInfo.h */,
+				214990081AF79B5A00253009 /* UserInfo.m */,
+				2149900A1AF79B7600253009 /* RepositoryInfo.h */,
+				2149900B1AF79B7600253009 /* RepositoryInfo.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		217E97621AE777B500DFB130 = {
@@ -119,6 +144,7 @@
 		217E976D1AE777B600DFB130 /* GithubReader */ = {
 			isa = PBXGroup;
 			children = (
+				214990061AF79B4100253009 /* Classes */,
 				217E97721AE777B700DFB130 /* AppDelegate.h */,
 				217E97731AE777B700DFB130 /* AppDelegate.m */,
 				217E97971AE7805D00DFB130 /* Controllers */,
@@ -168,8 +194,6 @@
 				214990001AF7589600253009 /* MoreInfoViewController.m */,
 				217E97781AE777B700DFB130 /* ViewController.h */,
 				217E97791AE777B700DFB130 /* ViewController.m */,
-				214990031AF77FE400253009 /* WebViewController.h */,
-				214990041AF77FE400253009 /* WebViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +223,8 @@
 		A5D93AD31AF6833400B3E056 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2149900D1AF79DC500253009 /* ImageDownloader.h */,
+				2149900E1AF79DC500253009 /* ImageDownloader.m */,
 				A5D0831C1AF686620022DC41 /* DataLoader.h */,
 				A5D0831D1AF686620022DC41 /* DataLoader.m */,
 				A5D0831F1AF698240022DC41 /* Parsing */,
@@ -291,6 +317,7 @@
 				A5D93AD21AF6213800B3E056 /* star.png in Resources */,
 				A5D93ACD1AF6213800B3E056 /* brunch.png in Resources */,
 				A5D93AD11AF6213800B3E056 /* save.png in Resources */,
+				214990141AF7ABC900253009 /* RepoTableViewCell.xib in Resources */,
 				A5D93ACF1AF6213800B3E056 /* fork.png in Resources */,
 				217E977D1AE777B700DFB130 /* Main.storyboard in Resources */,
 				A5D93ACE1AF6213800B3E056 /* earth.png in Resources */,
@@ -315,9 +342,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				214990011AF7589600253009 /* MoreInfoViewController.m in Sources */,
+				2149900F1AF79DC500253009 /* ImageDownloader.m in Sources */,
+				214990091AF79B5A00253009 /* UserInfo.m in Sources */,
 				217E97741AE777B700DFB130 /* AppDelegate.m in Sources */,
 				217E97771AE777B700DFB130 /* GithubReader.xcdatamodeld in Sources */,
-				214990051AF77FE400253009 /* WebViewController.m in Sources */,
+				2149900C1AF79B7600253009 /* RepositoryInfo.m in Sources */,
+				214990131AF7ABC900253009 /* RepoTableViewCell.m in Sources */,
 				217E977A1AE777B700DFB130 /* ViewController.m in Sources */,
 				217E97711AE777B700DFB130 /* main.m in Sources */,
 				A5D083221AF698F10022DC41 /* Parser.m in Sources */,
