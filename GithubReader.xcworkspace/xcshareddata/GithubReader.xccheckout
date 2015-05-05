@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FB729116-3A2D-4B78-B616-AE4EB167868F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GithubReader</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>33F65AA6CB6829BC76DCEF4330D23389AF1ADEC2</key>
+		<string>https://github.com/IgorIliyn/GithubReader.git</string>
+		<key>E77703DFE3DDCA7BF8B8BD34BC0B15CA063DB961</key>
+		<string>https://bitbucket.org/Igorok47/rgcmobile.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GithubReader.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>33F65AA6CB6829BC76DCEF4330D23389AF1ADEC2</key>
+		<string>..</string>
+		<key>E77703DFE3DDCA7BF8B8BD34BC0B15CA063DB961</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/IgorIliyn/GithubReader.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>33F65AA6CB6829BC76DCEF4330D23389AF1ADEC2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E77703DFE3DDCA7BF8B8BD34BC0B15CA063DB961</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>33F65AA6CB6829BC76DCEF4330D23389AF1ADEC2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GithubReader</string>
+		</dict>
+	</array>
+</dict>
+</plist>
