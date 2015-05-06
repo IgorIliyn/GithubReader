@@ -1,0 +1,6 @@
+#include "Pods-GithubReader-UAGithubEngine.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/UAGithubEngine" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/UAGithubEngine"
+OTHER_LDFLAGS = ${PODS_GITHUBREADER_UAGITHUBENGINE_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

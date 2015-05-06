@@ -3,6 +3,7 @@ platform :ios, '8.0'
 
 target 'GithubReader' do
 pod 'AFNetworking', '2.5'
+pod 'UAGithubEngine'
 end
 
 target 'GithubReaderTests' do

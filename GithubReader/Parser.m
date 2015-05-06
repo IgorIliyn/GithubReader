@@ -88,6 +88,8 @@
             {
                 [repository setLanguage:@"no name"];
             }
+            [repository setFork_url:repo[@"forks_url"]];
+            [repository setStar_url:repo[@"stargazers_url"]];
             [repository setCountStars:repo[@"stargazers_count"]];
             [repository setCountForks:repo[@"forks_count"]];
             [namesArray addObject:repository];
@@ -98,6 +100,7 @@
         NSLog(@"%@",parseError);
     }
     
-    return namesArray;}
+    return namesArray;
+}
 
 @end

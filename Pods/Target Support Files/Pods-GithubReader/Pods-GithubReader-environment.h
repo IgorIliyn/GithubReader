@@ -48,3 +48,9 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 0
 
+// UAGithubEngine
+#define COCOAPODS_POD_AVAILABLE_UAGithubEngine
+#define COCOAPODS_VERSION_MAJOR_UAGithubEngine 2
+#define COCOAPODS_VERSION_MINOR_UAGithubEngine 3
+#define COCOAPODS_VERSION_PATCH_UAGithubEngine 0
+

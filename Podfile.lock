@@ -20,11 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - UAGithubEngine (2.3)
 
 DEPENDENCIES:
   - AFNetworking (= 2.5)
+  - UAGithubEngine
 
 SPEC CHECKSUMS:
   AFNetworking: 96ac9bf3eda33582701cb1fcc5b896aa1e20311e
+  UAGithubEngine: 774172b0cc0c9fe35c7bcfb7eb3d64787b846d9d
 
 COCOAPODS: 0.37.0

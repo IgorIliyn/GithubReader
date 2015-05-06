@@ -12,8 +12,11 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *language;
+@property (nonatomic, strong) NSString *fork_url;
+@property (nonatomic, strong) NSString *star_url;
 @property (nonatomic, strong) NSNumber *countStars;
 @property (nonatomic, strong) NSNumber *countForks;
+
 
 - (NSString *)getLanguageString;
 

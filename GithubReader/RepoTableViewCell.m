@@ -25,4 +25,14 @@
     return @"CellRepo";
 }
 
+- (IBAction)forkRepoAction:(UIButton *)sender
+{
+    
+}
+
+- (IBAction)starRepoAction:(UIButton *)sender
+{
+    
+}
+
 @end

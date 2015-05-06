@@ -7,6 +7,7 @@
 //
 
 #import "MoreInfoViewController.h"
+#import <UAGithubEngine/UAGithubEngine.h>
 
 @interface MoreInfoViewController ()
 
@@ -98,6 +99,13 @@
 
 - (IBAction)shareSocial:(UIButton *)sender
 {
+    UAGithubEngine *engine = [[UAGithubEngine alloc] initWithUsername:@"IgorIliyn" password:@"discovery47" withReachability:YES];
+    
+    [engine repositoriesWithSuccess:^(id response) {
+        NSLog(@"Got an array of repos: %@", response);
+    } failure:^(NSError *error) {
+        NSLog(@"Oops: %@", error);
+    }];
     
 }
 
@@ -139,6 +147,8 @@
 {
     RepoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellRepo" forIndexPath:indexPath];
     RepositoryInfo *repoInfo = [self.repositoriesArray objectAtIndex:indexPath.row];
+    cell.fork_url = repoInfo.fork_url;
+    cell.star_url = repoInfo.star_url;
     cell.repoNameLabel.text = repoInfo.name;
     cell.repoLanguageLabel.text = [repoInfo getLanguageString];
     cell.repoForkLabel.text = [repoInfo.countForks stringValue];

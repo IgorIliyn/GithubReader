@@ -15,4 +15,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *repoForkLabel;
 @property (nonatomic, strong) IBOutlet UILabel *repoStarLabel;
 
+@property (nonatomic, strong) NSString *fork_url;
+@property (nonatomic, strong) NSString *star_url;
+
 @end
