@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DE96D3B1BE37EAEF798AAB0E"
+               BlueprintIdentifier = "15A96B29CE4AED22663E0873"
                BuildableName = "libPods-GithubReader-UAGithubEngine.a"
                BlueprintName = "Pods-GithubReader-UAGithubEngine"
                ReferencedContainer = "container:Pods.xcodeproj">

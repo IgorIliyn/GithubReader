@@ -9,6 +9,26 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-GithubReader-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GithubReader-FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GithubReader-FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GithubReader-FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GithubReader-UAGithubEngine.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -21,22 +41,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>5B1E422ED431C240A35013A1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A7A0C9DD23B5B88C96FD0F77</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE96D3B1BE37EAEF798AAB0E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
