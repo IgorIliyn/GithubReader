@@ -99,7 +99,7 @@
 
 - (IBAction)shareSocial:(UIButton *)sender
 {
-    [self inputCredentials];
+    
 }
 
 - (IBAction)saveUserInfo:(UIButton *)sender
@@ -143,6 +143,10 @@
                                                    NSString *password = ((UITextField*)[[alert textFields] objectAtIndex:1]).text;
                                                    
                                                    if ([login isEqualToString:@""] || [password isEqualToString:@""]) {
+                                                       
+                                                   }
+                                                   else
+                                                   {
                                                        [self saveCredentials:login password:password];
                                                    }
                                                    
@@ -169,9 +173,12 @@
 - (void)saveCredentials:(NSString *)login password:(NSString *)password
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:login forKey:@"LOGIN"];
-    [defaults setObject:password forKey:@"PASSWORD"];
-    
+    UserCredentials *credentials = [[UserCredentials alloc]init];
+    credentials.login = login;
+    credentials.password = password;
+    NSData *dataCredentials = [NSKeyedArchiver archivedDataWithRootObject:credentials];
+    [defaults setObject:dataCredentials forKey:@"CREDENTIALS"];
+    [defaults synchronize];
 }
 
 - (void)fillAllFieldsPlease

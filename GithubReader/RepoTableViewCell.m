@@ -63,13 +63,13 @@
     BOOL flag = NO;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *login = [defaults valueForKey:@"LOGIN"];
-    NSString *password = [defaults valueForKey:@"PASSWORD"];
+    NSData *shData = [defaults objectForKey:@"CREDENTIALS"];
+    UserCredentials *credentials = (UserCredentials *)[NSKeyedUnarchiver unarchiveObjectWithData:shData];
     
-    if (login && password)
+    if (credentials)
     {
-        self.userLogin = login;
-        self.userPassword = password;
+        self.userLogin = credentials.login;
+        self.userPassword = credentials.password;
         flag = YES;
     }
     

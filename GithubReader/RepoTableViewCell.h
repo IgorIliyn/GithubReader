@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UAGithubEngine.h" 
+#import "UserCredentials.h"
 
 @protocol RepositoryHandle <NSObject>
 
