@@ -27,13 +27,25 @@
 
 - (IBAction)forkRepoAction:(UIButton *)sender
 {
-    UAGithubEngine *engine = [[UAGithubEngine alloc] initWithUsername:@"IgorIliyn" password:@"discovery47" withReachability:YES];
+    if ([self checkCredentials])
+    {
+        UAGithubEngine *engine = [[UAGithubEngine alloc] initWithUsername:self.userLogin password:self.userPassword withReachability:YES];
     
-   [engine forkRepository:self.fork_url inOrganization:nil success:^(id obj) {
-        NSLog(@"%@",obj);
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
+        [engine forkRepository:self.fork_url inOrganization:nil success:^(id obj) {
+            NSLog(@"SUCCESS %@",obj);
+            if ([self.repoDelegate respondsToSelector:@selector(updateRepositories)]) {
+                [self.repoDelegate updateRepositories];
+            }
+        } failure:^(NSError *error) {
+            NSLog(@"ERROR %@",error);
+        }];
+    }
+    else
+    {
+        if ([self.repoDelegate respondsToSelector:@selector(inputCredentials)]) {
+            [self.repoDelegate inputCredentials];
+        }
+    }
 }
 
 - (IBAction)starRepoAction:(UIButton *)sender
@@ -43,6 +55,9 @@
         UAGithubEngine *engine = [[UAGithubEngine alloc] initWithUsername:self.userLogin password:self.userPassword withReachability:YES];
         [engine starRepository:self.star_url success:^(id obj) {
             NSLog(@"SUCCESS");
+            if ([self.repoDelegate respondsToSelector:@selector(updateRepositories)]) {
+                [self.repoDelegate updateRepositories];
+            }
         } failure:^(NSError *error) {
             NSLog(@"ERROR");
         }];

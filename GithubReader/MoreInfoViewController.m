@@ -8,6 +8,8 @@
 
 #import "MoreInfoViewController.h"
 #import <UAGithubEngine/UAGithubEngine.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface MoreInfoViewController ()
 
@@ -20,7 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.center = self.view.center;
+    [self.view addSubview:loginButton];
     [self initAppearance];
     self.repositoriesArray = [NSMutableArray array];
     
@@ -184,6 +188,17 @@
 - (void)fillAllFieldsPlease
 {
     
+}
+
+- (void)updateRepositories
+{
+    DataLoader *reposLoader = [[DataLoader alloc]init];
+    Parser *parserRepos = [[Parser alloc]init];
+    reposLoader.complationHandler = ^(NSMutableData *data){
+        self.repositoriesArray = [parserRepos parseRepositories:data];
+        [self.tableView reloadData];
+    };
+    [reposLoader userRepositories:self.userName];
 }
 
 #pragma mark UITableViewDataSource

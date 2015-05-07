@@ -13,6 +13,7 @@
 @protocol RepositoryHandle <NSObject>
 
 - (void)inputCredentials;
+- (void)updateRepositories;
 
 @end
 
