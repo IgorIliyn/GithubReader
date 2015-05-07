@@ -12,3 +12,9 @@
 "following" = "following";
 "Repositories" = "Repositories";
 "Language:" = "Language:";
+"Login" = "Login";
+"Password" = "Password";
+"Please enter your login and password" = "Please enter your login and password";
+"Authorization" = "Authorization";
+"Save" = "Save";
+"Cancel" = "Cancel";

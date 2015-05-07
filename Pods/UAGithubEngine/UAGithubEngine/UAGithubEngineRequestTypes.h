@@ -24,6 +24,7 @@ typedef enum UAGithubRequestType
 	UAGithubRepositoryUnwatchRequest,				// Unwatch a repository
     UAGithubRepositoryForksRequest,                 // Get one or more forks
 	UAGithubRepositoryForkRequest,					// Fork a repository
+    UAGithubRepositoryStarRequest,                  // Star a repository
 	UAGithubRepositoryCreateRequest,				// Create a repository
 	UAGithubRepositoryPrivatiseRequest,				// Make a repository private
 	UAGithubRepositoryPubliciseRequest,				// Make a repository public

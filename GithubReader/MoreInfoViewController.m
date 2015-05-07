@@ -99,14 +99,7 @@
 
 - (IBAction)shareSocial:(UIButton *)sender
 {
-    UAGithubEngine *engine = [[UAGithubEngine alloc] initWithUsername:@"IgorIliyn" password:@"discovery47" withReachability:YES];
-    
-    [engine repositoriesWithSuccess:^(id response) {
-        NSLog(@"Got an array of repos: %@", response);
-    } failure:^(NSError *error) {
-        NSLog(@"Oops: %@", error);
-    }];
-    
+    [self inputCredentials];
 }
 
 - (IBAction)saveUserInfo:(UIButton *)sender
@@ -135,6 +128,56 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.userInfo.profileURL]];
 }
 
+#pragma mark User Credential methods
+
+- (void)inputCredentials
+{
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Authorization", nil)
+                                                                    message:NSLocalizedString(@"Please enter your login and password", nil)
+                                                             preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:NSLocalizedString(@"Save", nil) style:UIAlertActionStyleDefault
+                                               handler:^(UIAlertAction * action) {
+                                                   
+                                                   NSString *login = ((UITextField*)[[alert textFields] objectAtIndex:0]).text;
+                                                   NSString *password = ((UITextField*)[[alert textFields] objectAtIndex:1]).text;
+                                                   
+                                                   if ([login isEqualToString:@""] || [password isEqualToString:@""]) {
+                                                       [self saveCredentials:login password:password];
+                                                   }
+                                                   
+                                               }];
+    UIAlertAction* cancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       
+                                                   }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = NSLocalizedString(@"Login", nil);
+    }];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = NSLocalizedString(@"Password", nil);
+        textField.secureTextEntry = YES;
+    }];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)saveCredentials:(NSString *)login password:(NSString *)password
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:login forKey:@"LOGIN"];
+    [defaults setObject:password forKey:@"PASSWORD"];
+    
+}
+
+- (void)fillAllFieldsPlease
+{
+    
+}
 
 #pragma mark UITableViewDataSource
 
@@ -153,7 +196,7 @@
     cell.repoLanguageLabel.text = [repoInfo getLanguageString];
     cell.repoForkLabel.text = [repoInfo.countForks stringValue];
     cell.repoStarLabel.text = [repoInfo.countStars stringValue];
-    
+    cell.repoDelegate = self;
     return cell;
 }
 

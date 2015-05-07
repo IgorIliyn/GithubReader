@@ -12,3 +12,9 @@
 "following" = "слідом за";
 "Repositories" = "Репозиторії";
 "Language:" = "Мова:";
+"Login" = "Логін";
+"Password" = "Пароль";
+"Please enter your login and password" = "Будь ласка, введіть ваш логін і пароль";
+"Authorization" = "Авторизація";
+"Save" = "Зберегти";
+"Cancel" = "Скасувати";

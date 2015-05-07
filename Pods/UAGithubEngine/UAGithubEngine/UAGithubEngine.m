@@ -175,6 +175,7 @@
         case UAGithubPullRequestCommentCreateRequest:
         case UAGithubEmailAddRequest:    
         case UAGithubTeamCreateRequest:
+        case UAGithubRepositoryForkRequest:
 		{
 			[urlRequest setHTTPMethod:@"POST"];
 		}
@@ -192,7 +193,12 @@
             [urlRequest setHTTPMethod:@"PUT"];
         }
             break;
-            
+        case UAGithubRepositoryStarRequest:
+        {
+            [urlRequest setValue:@"0" forHTTPHeaderField:@"Content-Length"];
+            [urlRequest setHTTPMethod:@"PUT"];
+        }
+            break;
 		case UAGithubRepositoryUpdateRequest:
         case UAGithubMilestoneUpdateRequest:
         case UAGithubIssueEditRequest:
@@ -1133,6 +1139,12 @@
     [self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"repos/%@/downloads/%ld", repositoryPath, downloadId] requestType:UAGithubDownloadDeleteRequest responseType:UAGithubNoContentResponse error:nil];} booleanSuccess:successBlock failure:failureBlock];
 }
 
+#pragma mark Starred
+
+- (void)starRepository:(NSString *)repositoryPath success:(UAGithubEngineSuccessBlock)successBlock failure:(UAGithubEngineFailureBlock)failureBlock
+{
+    [self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"user/starred/%@", repositoryPath] requestType:UAGithubRepositoryStarRequest responseType:UAGithubNoContentResponse error:nil];} success:successBlock failure:failureBlock];
+}
 
 #pragma mark Forks
 

@@ -27,12 +27,53 @@
 
 - (IBAction)forkRepoAction:(UIButton *)sender
 {
+    UAGithubEngine *engine = [[UAGithubEngine alloc] initWithUsername:@"IgorIliyn" password:@"discovery47" withReachability:YES];
     
+   [engine forkRepository:self.fork_url inOrganization:nil success:^(id obj) {
+        NSLog(@"%@",obj);
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (IBAction)starRepoAction:(UIButton *)sender
 {
+    if ([self checkCredentials])
+    {
+        UAGithubEngine *engine = [[UAGithubEngine alloc] initWithUsername:self.userLogin password:self.userPassword withReachability:YES];
+        [engine starRepository:self.star_url success:^(id obj) {
+            NSLog(@"SUCCESS");
+        } failure:^(NSError *error) {
+            NSLog(@"ERROR");
+        }];
+    }
+    else
+    {
+        if ([self.repoDelegate respondsToSelector:@selector(inputCredentials)]) {
+            [self.repoDelegate inputCredentials];
+        }
+    }
     
+}
+
+#pragma mark User Credentials methods
+
+- (BOOL)checkCredentials
+{
+    BOOL flag = NO;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *login = [defaults valueForKey:@"LOGIN"];
+    NSString *password = [defaults valueForKey:@"PASSWORD"];
+    
+    if (login && password)
+    {
+        self.userLogin = login;
+        self.userPassword = password;
+        flag = YES;
+    }
+    
+    return flag;
 }
 
 @end

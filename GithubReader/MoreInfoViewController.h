@@ -15,6 +15,10 @@
 
 @interface MoreInfoViewController : UIViewController
 
+<
+    RepositoryHandle
+>
+
 @property (nonatomic, strong) NSString *userName;
 @property (strong, nonatomic) IBOutlet UILabel *followersLabel;
 @property (strong, nonatomic) IBOutlet UILabel *userNameLabel;

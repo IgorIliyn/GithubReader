@@ -88,8 +88,8 @@
             {
                 [repository setLanguage:@"no name"];
             }
-            [repository setFork_url:repo[@"forks_url"]];
-            [repository setStar_url:repo[@"stargazers_url"]];
+            [repository setFork_url:repo[@"full_name"]];
+            [repository setStar_url:repo[@"full_name"]];
             [repository setCountStars:repo[@"stargazers_count"]];
             [repository setCountForks:repo[@"forks_count"]];
             [namesArray addObject:repository];
