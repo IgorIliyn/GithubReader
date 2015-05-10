@@ -33,6 +33,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -243,16 +244,17 @@
                         <outlet property="tableView" destination="Jo8-YP-7Du" id="uTs-sE-VbK"/>
                         <outlet property="userNameLabel" destination="0KR-CB-f3N" id="XyF-TK-glG"/>
                         <segue destination="icY-z0-TfN" kind="show" identifier="goToSocial" id="yck-Ex-9y3"/>
+                        <segue destination="Ady-qZ-sIW" kind="show" identifier="goToSaveInfo" id="ea2-sm-0ZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5z-m3-6Ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1642" y="417"/>
         </scene>
-        <!--View Controller-->
+        <!--Social View Controller-->
         <scene sceneID="Atj-td-tqb">
             <objects>
-                <viewController id="icY-z0-TfN" sceneMemberID="viewController">
+                <viewController id="icY-z0-TfN" customClass="SocialViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iE0-tF-2XD"/>
                         <viewControllerLayoutGuide type="bottom" id="0Q4-Nt-FmH"/>
@@ -266,6 +268,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtS-m8-jN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2365" y="417"/>
+        </scene>
+        <!--Save User Info View Controller-->
+        <scene sceneID="kcW-84-7H1">
+            <objects>
+                <viewController id="Ady-qZ-sIW" customClass="SaveUserInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nA4-7F-6ba"/>
+                        <viewControllerLayoutGuide type="bottom" id="2tG-F8-7OC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3KK-2s-Dlu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qVO-XO-cSQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ady-qZ-sIW" id="bb2-BH-Jy5"/>
+                                    <outlet property="delegate" destination="Ady-qZ-sIW" id="qp6-dw-4uI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qVO-XO-cSQ" firstAttribute="top" secondItem="3KK-2s-Dlu" secondAttribute="topMargin" id="FjJ-wt-yJL"/>
+                            <constraint firstItem="2tG-F8-7OC" firstAttribute="top" secondItem="qVO-XO-cSQ" secondAttribute="bottom" id="lFR-nO-SJ5"/>
+                            <constraint firstItem="qVO-XO-cSQ" firstAttribute="leading" secondItem="3KK-2s-Dlu" secondAttribute="leadingMargin" constant="-16" id="nYU-po-v9P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qVO-XO-cSQ" secondAttribute="trailing" constant="-16" id="zU4-1c-0EU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="qVO-XO-cSQ" id="PTC-7g-BOy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5X-5U-pTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="1162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pvn-wZ-0z1">

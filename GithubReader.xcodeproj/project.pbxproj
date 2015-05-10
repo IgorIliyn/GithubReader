@@ -22,6 +22,8 @@
 		217E97821AE777B700DFB130 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217E97801AE777B700DFB130 /* LaunchScreen.xib */; };
 		217E978E1AE777B800DFB130 /* GithubReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E978D1AE777B800DFB130 /* GithubReaderTests.m */; };
 		219DA03E1AEE58E50076742F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 219DA0401AEE58E50076742F /* Localizable.strings */; };
+		A5813A071AFF56C600F5BA4F /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5813A061AFF56C600F5BA4F /* SocialViewController.m */; };
+		A5813A0A1AFF6BC000F5BA4F /* SaveUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5813A091AFF6BC000F5BA4F /* SaveUserInfoViewController.m */; };
 		A5D0831E1AF686620022DC41 /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0831D1AF686620022DC41 /* DataLoader.m */; };
 		A5D083221AF698F10022DC41 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D083211AF698F10022DC41 /* Parser.m */; };
 		A5D4231C1AFBC5EA00522BD7 /* UserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D4231B1AFBC5EA00522BD7 /* UserCredentials.m */; };
@@ -77,6 +79,10 @@
 		362A24C030F5242D16A7A52C /* Pods-GithubReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubReader/Pods-GithubReader.release.xcconfig"; sourceTree = "<group>"; };
 		6033F38323F6FB83ECBBD868 /* Pods-GithubReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubReader/Pods-GithubReader.debug.xcconfig"; sourceTree = "<group>"; };
 		997B1FF72E98C27E1051804B /* libPods-GithubReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GithubReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5813A051AFF56C600F5BA4F /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
+		A5813A061AFF56C600F5BA4F /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
+		A5813A081AFF6BC000F5BA4F /* SaveUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUserInfoViewController.h; sourceTree = "<group>"; };
+		A5813A091AFF6BC000F5BA4F /* SaveUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUserInfoViewController.m; sourceTree = "<group>"; };
 		A5D0831C1AF686620022DC41 /* DataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoader.h; sourceTree = "<group>"; };
 		A5D0831D1AF686620022DC41 /* DataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLoader.m; sourceTree = "<group>"; };
 		A5D083201AF698F10022DC41 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
@@ -206,6 +212,10 @@
 				214990001AF7589600253009 /* MoreInfoViewController.m */,
 				217E97781AE777B700DFB130 /* ViewController.h */,
 				217E97791AE777B700DFB130 /* ViewController.m */,
+				A5813A051AFF56C600F5BA4F /* SocialViewController.h */,
+				A5813A061AFF56C600F5BA4F /* SocialViewController.m */,
+				A5813A081AFF6BC000F5BA4F /* SaveUserInfoViewController.h */,
+				A5813A091AFF6BC000F5BA4F /* SaveUserInfoViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -409,7 +419,9 @@
 				2149900F1AF79DC500253009 /* ImageDownloader.m in Sources */,
 				214990091AF79B5A00253009 /* UserInfo.m in Sources */,
 				217E97741AE777B700DFB130 /* AppDelegate.m in Sources */,
+				A5813A071AFF56C600F5BA4F /* SocialViewController.m in Sources */,
 				217E97771AE777B700DFB130 /* GithubReader.xcdatamodeld in Sources */,
+				A5813A0A1AFF6BC000F5BA4F /* SaveUserInfoViewController.m in Sources */,
 				2149900C1AF79B7600253009 /* RepositoryInfo.m in Sources */,
 				214990131AF7ABC900253009 /* RepoTableViewCell.m in Sources */,
 				217E977A1AE777B700DFB130 /* ViewController.m in Sources */,

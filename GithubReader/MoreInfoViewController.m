@@ -8,8 +8,8 @@
 
 #import "MoreInfoViewController.h"
 #import <UAGithubEngine/UAGithubEngine.h>
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "SocialViewController.h"
+#import "SaveUserInfoViewController.h"
 
 @interface MoreInfoViewController ()
 
@@ -22,9 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
     [self initAppearance];
     self.repositoriesArray = [NSMutableArray array];
     
@@ -103,27 +100,12 @@
 
 - (IBAction)shareSocial:(UIButton *)sender
 {
-    
+    [self performSegueWithIdentifier:@"goToSocial" sender:self];
 }
 
 - (IBAction)saveUserInfo:(UIButton *)sender
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
-    if (context) {
-        NSManagedObject *itemModel = [NSEntityDescription insertNewObjectForEntityForName:@"UserInfo" inManagedObjectContext:context];
-        
-        [itemModel setValue:self.userInfo.name forKey:@"userName"];
-        [itemModel setValue:self.userInfo.countFollowers forKey:@"followers"];
-        [itemModel setValue:self.userInfo.countFollowing forKey:@"following"];
-        
-        NSError *error;
-        
-        if (![context save:&error])
-        {
-            NSLog(@"Error saving item!!!");
-        }
-    }
+    [self performSegueWithIdentifier:@"goToSaveInfo" sender:self];
 }
 
 - (IBAction)viewProfilePage:(UIButton *)sender
@@ -146,8 +128,9 @@
                                                    NSString *login = ((UITextField*)[[alert textFields] objectAtIndex:0]).text;
                                                    NSString *password = ((UITextField*)[[alert textFields] objectAtIndex:1]).text;
                                                    
-                                                   if ([login isEqualToString:@""] || [password isEqualToString:@""]) {
-                                                       
+                                                   if ([login isEqualToString:@""] || [password isEqualToString:@""])
+                                                   {
+                                                       [self fillAllFieldsPlease];
                                                    }
                                                    else
                                                    {
@@ -177,9 +160,11 @@
 - (void)saveCredentials:(NSString *)login password:(NSString *)password
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     UserCredentials *credentials = [[UserCredentials alloc]init];
     credentials.login = login;
     credentials.password = password;
+    
     NSData *dataCredentials = [NSKeyedArchiver archivedDataWithRootObject:credentials];
     [defaults setObject:dataCredentials forKey:@"CREDENTIALS"];
     [defaults synchronize];
@@ -187,7 +172,12 @@
 
 - (void)fillAllFieldsPlease
 {
-    
+    UIAlertView *allFields = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Authorization", nil)
+                                                       message:NSLocalizedString(@"All fields", nil)
+                                                      delegate:nil
+                                             cancelButtonTitle:@"OK"
+                                             otherButtonTitles:nil];
+    [allFields show];
 }
 
 - (void)updateRepositories
@@ -238,25 +228,18 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"goToWebPage"]) {
+    if ([[segue identifier] isEqualToString:@"goToWebPage"])
+    {
         [[segue destinationViewController] setProfileURL:self.userInfo.profileURL];
     }
-}
-
-#pragma mark Core Data Support
-
-- (NSManagedObjectContext *)managedObjectContext
-{
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    
-    if ([delegate performSelector:@selector(managedObjectContext)])
+    else if ([[segue identifier] isEqualToString:@"goToSocial"])
     {
-        context = [delegate managedObjectContext];
+        [[segue destinationViewController] setShareURL:self.userInfo.profileURL];
     }
-    
-    return context;
+    else if ([[segue identifier] isEqualToString:@"goToSaveInfo"])
+    {
+        [[segue destinationViewController] setUserInformation:self.userInfo];
+    }
 }
-
 
 @end

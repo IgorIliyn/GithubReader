@@ -20,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //init
     [self initAppearance];
     self.userNames = [NSMutableArray array];
     // Do any additional setup after loading the view, typically from a nib.
@@ -120,6 +121,7 @@
 
 #pragma mark Animation
 
+//Animate search Bar
 - (void)searchAnimation
 {
     self.viewOffset = self.searchBar.frame.origin.y - 64;
@@ -149,8 +151,10 @@
 
 #pragma mark User Action
 
+
 - (IBAction)tellMeMoreAction:(UIButton *)sender
 {
+    //Go to MoreInfoController if userneme selected
     if (![self.searchBar.text isEqualToString:@""]) {
         [self performSegueWithIdentifier:@"goToMoreInfo" sender:self];
     }
@@ -183,8 +187,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.searchBar.text = [self.userNames objectAtIndex:indexPath.row];
+    NSString *userName = [self.userNames objectAtIndex:indexPath.row];
+    
+    self.searchBar.text = userName;
+    //hide search results
     [self searchAnimation];
+    //hide keyboard
     [self.view endEditing:YES];
 }
 
